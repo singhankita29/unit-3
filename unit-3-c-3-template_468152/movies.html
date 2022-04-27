@@ -9,18 +9,36 @@
       .book_now{
         margin-top: 20px;
       }
+      #search{
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        padding: 10px;
+        font-size: large;
+      }
+      #movies{
+        margin-top: 20px;
+        display:grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        gap: 15px;
+      }
+      #movies>div>img{
+        height: 300px;
+        width: 98%;
+      }
     </style>
   </head>
   <body>
     <div id="navbar">
       <h1>Movie List</h1>
       <!-- Display the wallet amount here inside h1 tag with id as "wallet". Note only amount, no extra text. Like 500 not Rs 500 -->
-      
+      <h1 id="wallet"></h1>
     </div>
     <div id="search_bar">
       <!-- input box for searching movies with id as "search" -->
       <!-- No button should be there for searching movies, it should search with input  -->
-      <input oninput="searchMovies()" id="search" type="text"/>
+      <input oninput="searchMovies()" id="search" placeholder="Search here" type="text"/>
      
     </div>
 
@@ -30,7 +48,7 @@
       <!-- Book now buttons should have class "book_now"  -->
  
     </div>
-    <button class="book_now">Book Now</button>
+   
   </body>
 </html>
 

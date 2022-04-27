@@ -5,16 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout</title>
+    <style>
+        #navbar{
+        display: flex;
+        justify-content: space-around;
+      }
+      #movie>div{
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+      }
+    </style>
+
   </head>
   <body>
     <div id="navbar">
       <h1>Checkout | Cost: 100/seat</h1>
+      <h1 id="wallet"></h1>
       <!-- Display the wallet amount here inside h1 tag with id as "wallet". Note only amount, no extra text. Like 500 not Rs 500 -->
     </div>
     <div id="user-detail">
       <!-- input field to accept user name with id as "user_name"  -->
       <!-- input field to accept number of seats with id as "number_of_seats"  -->
       <!-- A submit button to confirm booking with id as "confirm"  -->
+      <input type="text" id="user_name" placeholder="Enter Your Name">
+      <input type="number" placeholder="Number of Seats" id="number_of_seats">
+      <button onclick="confirmbooking()" id="confirm">Conform</button>
+
     </div>
 
     <div id="movie">
@@ -24,3 +41,6 @@
     </div>
   </body>
 </html>
+
+<script src="./scripts/checkout.js"></script>
+
